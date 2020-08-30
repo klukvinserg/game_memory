@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: beige;
+}
+
+.top-main {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
+  border-bottom: 1px solid gainsboro;
+  align-items: center;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.top-main > button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.top,
+.bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.top > div,
+.bottom > div {
+  width: 100px;
+  height: 140px;
+  border: 1px solid black;
+  margin: 10px;
+  background-image: url("../fon.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+
+img {
+  width: 100px;
+  height: 140px;
+}
+
+.win {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: 70px;
+  font-weight: bolder;
+  color: red;
+}
