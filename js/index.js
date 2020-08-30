@@ -13,12 +13,16 @@ let count = 0;
 let clickOneElement;
 let clickTwoElement;
 
-let temp = false;
+let start;
+let finish;
 
 $(document).ready(function () {
   $('.button-start').on('click', getAllCard);
 
   function getAllCard() {
+    start = Date.now();
+    console.log(start);
+
     $('.block').empty();
 
     $('.button-start').attr('disabled', true);
@@ -95,6 +99,8 @@ $(document).ready(function () {
       $('.top > .background').on('click', showCard);
       $('.bottom > .background').on('click', showCard);
     } else if (count === 2 && clickTwo === clickOne) {
+      finish = Date.now();
+
       $(clickOneElement).unwrap();
       $(clickTwoElement).unwrap();
 
@@ -113,6 +119,9 @@ $(document).ready(function () {
         $('.top-main > p').hide();
         $('.top-main > .button-start').hide();
         $('.top-main').css('border-bottom', 'none');
+        $('.text-small').html(
+          `Твій час ${((finish - start) / 1000).toFixed(2)} с.`
+        );
         $('.win').show();
       }
 
